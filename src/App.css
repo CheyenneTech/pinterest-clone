@@ -1,38 +1,83 @@
-.App {
+/* App.css */
+
+/* Apply a reset to avoid browser-specific styles */
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+/* Set up the main container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Add styles for the Pinterest-style grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Adjust the number of columns as needed */
+  gap: 16px;
+}
+
+/* styles for individual grid items */
+.grid-item {
+  width: 100%;
+  /* Add additional styles like border, padding, and box-shadow for the grid items */
+}
+
+/* Add other styles for header, footer, etc. as needed */
+
+
+/* styles for the Pinterest-style grid items */
+.grid-item {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* styles for the image inside grid items */
+.grid-item img {
+  width: 100%;
+  height: 200px; /* Set the desired height for the pins' images */
+  object-fit: cover; /* Ensure images maintain aspect ratio and cover the entire space */
+  object-position: center; /* Center the images within their containers */
+  border-radius: 8px 8px 0 0; /* Rounded top corners for the images */
+}
+
+/* styles for the title inside grid items */
+.grid-item p {
+  margin: 0;
+  padding: 10px;
+  background-color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 0 0 8px 8px; /* Rounded bottom corners for the title */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* hover effect for grid items */
+.grid-item:hover {
+  transform: translateY(-2px); /* Lift the grid item slightly on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* styles for the header and footer */
+header, footer {
+  padding: 16px;
+  background-color: #606c38;
+  color: #fff;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Adjust the font and color for links in the footer */
+footer a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 8px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+footer a:hover {
+  text-decoration: underline;
 }
